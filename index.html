@@ -1,186 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Willona's Decor & Events Poster</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #FFCBA4;
-    color: gold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Willona's Decor & Events Poster</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #FFCBA4;
+      color: gold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
 
-  .poster {
-    max-width: 800px;
-    width: 90%;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    border-radius: 15px;
-    background: url('img.jpeg') no-repeat center center;
-    background-size: cover;
-    box-shadow: 0 0 30px rgba(255,215,0,0.7);
-    color: gold;
-    overflow: hidden;
-  }
-
-  /* Golden gradient overlay */
-  .poster::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.05));
-    z-index: 0;
-  }
-
-  .poster > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .logo {
-    width: 200px;
-    max-width: 80%;
-    margin-bottom: 15px;
-  }
-
-  .slogan {
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-style: italic;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px #b8860b;
-  }
-
-  .services, .contact-info {
-    font-style: italic;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 3px #b8860b;
-  }
-
-  /* Overlapping Diamond Images */
-  .images {
-    position: relative;
-    width: 100%;
-    height: 240px;
-    margin: 30px 0;
-  }
-
-  .images img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    transform: rotate(45deg);
-    border: 3px solid gold;
-    border-radius: 10px;
-    box-shadow: 0 0 15px gold, 0 0 25px goldenrod;
-    position: absolute;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  /* Overlap positioning */
-  .images img:nth-child(1) { left: 50%; transform: translateX(-50%) rotate(45deg); top: 0; z-index:4; }
-  .images img:nth-child(2) { left: 35%; top: 40px; transform: rotate(45deg); z-index:3; }
-  .images img:nth-child(3) { left: 65%; top: 40px; transform: rotate(45deg); z-index:3; }
-  .images img:nth-child(4) { left: 50%; top: 80px; transform: translateX(-50%) rotate(45deg); z-index:2; }
-
-  .images img:hover {
-    transform: rotate(45deg) scale(1.1);
-    box-shadow: 0 0 25px gold, 0 0 35px goldenrod;
-  }
-
-  .contact-info a {
-    display: inline-block;
-    margin: 5px 10px;
-    color: gold;
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px #b8860b;
-  }
-
-  #qrcode {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    box-shadow: 0 0 20px gold, 0 0 30px goldenrod;
-    padding: 5px;
-    border-radius: 10px;
-  }
-
-  @media(max-width: 600px){
     .poster {
-      padding: 15px;
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+      background: url('img.jpeg') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 0 30px rgba(255,215,0,0.7);
+      color: gold;
+      position: relative;
+      overflow: hidden;
     }
+
+    .poster::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.05));
+      z-index: 0;
+    }
+
+    .poster > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      width: 200px;
+      max-width: 80%;
+      margin-bottom: 15px;
+    }
+
     .slogan {
-      font-size: 1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #b8860b;
     }
+
     .services, .contact-info {
-      font-size: 0.95rem;
+      font-style: italic;
+      margin: 10px 0;
+      font-size: 1.1rem;
+      text-shadow: 1px 1px 3px #b8860b;
     }
+
     .images {
-      height: 200px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
     }
+
     .images img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      transform: rotate(45deg);
+      border: 3px solid gold;
+      border-radius: 10px;
+      box-shadow: 0 0 15px gold, 0 0 25px goldenrod;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .images img:nth-child(1) { top: 0; }
-    .images img:nth-child(2) { left: 30%; top: 30px; }
-    .images img:nth-child(3) { left: 60%; top: 30px; }
-    .images img:nth-child(4) { top: 70px; }
+
+    .images img:hover {
+      transform: rotate(45deg) scale(1.1);
+      box-shadow: 0 0 25px gold, 0 0 35px goldenrod;
+    }
+
+    .contact-info a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #b8860b;
+    }
+
+    #qrcode-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
     #qrcode {
-      width: 100px !important;
-      height: 100px !important;
-      bottom: 10px;
-      left: 10px;
+      box-shadow: 0 0 20px gold, 0 0 30px goldenrod;
+      padding: 5px;
+      border-radius: 10px;
+      background: white;
     }
-  }
-</style>
+
+    @media(max-width: 600px) {
+      .poster {
+        padding: 15px;
+      }
+      .slogan {
+        font-size: 1rem;
+      }
+      .services, .contact-info {
+        font-size: 0.95rem;
+      }
+      .images img {
+        width: 90px;
+        height: 90px;
+      }
+      #qrcode {
+        width: 100px !important;
+        height: 100px !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="poster">
-  <img src="willona.png" alt="Willona Logo" class="logo">
-  <div class="slogan"><b><i>We don’t just decorate spaces—we design moments that take your breath away.</i></b></div>
-  <div class="services">Services: Lobola, Wedding, Birthdays, Graduations, Funerals (prices vary)</div>
+  <div class="poster">
+    <img src="willona.png" alt="Willona Logo" class="logo" />
+    <div class="slogan"><b><i>We don’t just decorate spaces—we design moments that take your breath away.</i></b></div>
+    <div class="services">Services: Lobola, Wedding, Birthdays, Graduations, Funerals (prices vary)</div>
 
-  <!-- Overlapping Diamond Images -->
-  <div class="images">
-    <img src="img1.jpg" alt="Decor Image 1">
-    <img src="img2.jpg" alt="Decor Image 2">
-    <img src="img3.jpg" alt="Decor Image 3">
-    <img src="img4.jpg" alt="Decor Image 4">
+    <div class="images">
+      <img src="img1.jpg" alt="Decor Image 1">
+      <img src="img2.jpg" alt="Decor Image 2">
+      <img src="img3.jpg" alt="Decor Image 3">
+      <img src="img4.jpg" alt="Decor Image 4">
+    </div>
+
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> 530 Buthelezi Street, Twala Section, Katlehong, 1431</p>
+      <p><a href="https://wa.me/27685546465" target="_blank"><i class="fab fa-whatsapp"></i> 0685546465</a></p>
+      <p><a href="mailto:Mimi.Makhubo605@gmail.com"><i class="fas fa-envelope"></i> Mimi.Makhubo605@gmail.com</a></p>
+    </div>
+
+    <!-- QR Code Section -->
+    <div id="qrcode-container">
+      <div id="qrcode"></div>
+    </div>
   </div>
 
-  <div class="contact-info">
-    <p><i class="fas fa-map-marker-alt"></i> 530 Buthelezi Street, Twala Section, Katlehong, 1431</p>
-    <p><a href="https://wa.me/27685546465" target="_blank"><i class="fab fa-whatsapp"></i> 0685546465</a></p>
-    <p><a href="mailto:Mimi.Makhubo605@gmail.com"><i class="fas fa-envelope"></i> Mimi.Makhubo605@gmail.com</a></p>
-  </div>
-
-  <!-- QR Code -->
-  <div id="qrcode"></div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
-  new QRCode(document.getElementById("qrcode"), {
-    text: "https://siya019910.github.io/Willlona-s-Decor-Events/",
-    width: 120,
-    height: 120,
-    colorDark : "#000000",
-    colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.H
-  });
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://siya019910.github.io/Willlona-s-Decor-Events/",
+      width: 120,
+      height: 120,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  </script>
 </body>
 </html>
